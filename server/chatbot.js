@@ -104,7 +104,7 @@ app.use(
 
 // cors policy
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://aptous-nmce.vercel.app',
   credentials: true, // Set to 'true' to allow credentials (cookies, HTTP authentication) to be sent with requests
 }));
 
