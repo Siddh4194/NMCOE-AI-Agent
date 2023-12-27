@@ -104,12 +104,12 @@ app.use(
 
 // cors policy
 app.use(cors(
+));
+
 // 	{
 //   origin: 'https://aptous-nmce.vercel.app',
 //   credentials: true, // Set to 'true' to allow credentials (cookies, HTTP authentication) to be sent with requests
 // }
-));
-
   
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // This line is sufficient for parsing URL-encoded data
