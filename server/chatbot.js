@@ -105,10 +105,7 @@ app.use(
 // cors policy
 app.use(cors({
   origin: 'https://aptous-nmce.vercel.app',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-  optionsSuccessStatus: 204,
-  allowedHeaders: 'Content-Type, Authorization',
 }));
 
 
