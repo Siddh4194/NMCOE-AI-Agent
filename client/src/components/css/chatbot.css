@@ -909,4 +909,17 @@ text-align: center;
     background-color: var(--bot-color);
     font-size: 2vh;
   }
+  .in1,.in2,.in3{
+  border: none;
+  display: block;
+  width:70vw;
+  padding: 1vh;
+  color: #fff;
+  margin: .5rem;
+  background-color:var(--input-background);
+  border-bottom: 1px solid rgb(101, 101, 101);
+  border-radius: .25rem;
+  transition: 1s;
+}
+
 }
