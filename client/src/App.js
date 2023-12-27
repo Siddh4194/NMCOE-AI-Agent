@@ -17,21 +17,31 @@ function App() {
   // useEffect(()=>{
   //   Authcheck(setUser,setAuth);
   // },[authStatus])
-
   useEffect(() => {
-    let text = "Weelcome Boss";
-    let count = 0;
+    // Get the current URL
+    const currentUrl = window.location.href;
 
-    function animateText() {
-      setGreetings((prevText) => prevText + text[count]);
-      count += 1;
-      if (count === text.length-1) {
-        clearInterval(intervalId);
-      }
+    // Check if the current URL is the desired route
+    if (currentUrl.endsWith('/auth/success')) {
+      console.log('Accessing /auth/success route');
+      setAuth(true);
+      // Do something here if needed
     }
-    const intervalId = setInterval(animateText, 200);
-    return () => clearInterval(intervalId);
   }, []);
+  // useEffect(() => {
+  //   let text = "Weelcome Boss";
+  //   let count = 0;
+
+  //   function animateText() {
+  //     setGreetings((prevText) => prevText + text[count]);
+  //     count += 1;
+  //     if (count === text.length-1) {
+  //       clearInterval(intervalId);
+  //     }
+  //   }
+  //   const intervalId = setInterval(animateText, 200);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
 
   return (
