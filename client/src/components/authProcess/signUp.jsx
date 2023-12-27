@@ -78,8 +78,11 @@ export default function SignUp(props) {
       });
   };
 
-  const verEmail = (work) => {
+    const verEmail = (work) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     // Send signup request
+    if(emailRegex.test(userSignUp.email)){
     fetch(`https://chatbot-nmce.vercel.app/${work}`, {
       method: 'POST',
       headers: {
@@ -114,9 +117,10 @@ export default function SignUp(props) {
         setSnackbarMessage('Error during OTP verification. Please try again.');
         setSnackbarOpen(true);
       });
-  };
-
-  // Snackbar close handler
+    } else {
+      setOtpStatus('Enter Valid Email');
+    }
+  };  // Snackbar close handler
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);
   };
