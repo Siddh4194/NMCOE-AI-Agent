@@ -15,9 +15,9 @@ function App() {
   const [boss,getBoss] = useState(true);
   // check the authentication
 
-  useEffect(()=>{
-    Authcheck(setUser,setAuth);
-  },[authStatus])
+  // useEffect(()=>{
+  //   Authcheck(setUser,setAuth);
+  // },[authStatus])
 
   useEffect(() => {
     let text = "Weelcome Boss";
