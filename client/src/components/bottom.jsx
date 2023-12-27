@@ -30,6 +30,7 @@ const Bottom = (props) => {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
           input: userMsg,
         }),
