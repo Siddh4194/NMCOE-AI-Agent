@@ -899,4 +899,14 @@ text-align: center;
     opacity: 1;
   }
   
+  .ask-body input{
+    width: 80%;
+    border: none;
+    margin: auto;
+    margin-left: 1em;
+    color: var(--botton-text);
+    height: 50%;
+    background-color: var(--bot-color);
+    font-size: 2vh;
+  }
 }
