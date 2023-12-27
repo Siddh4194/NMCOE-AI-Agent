@@ -437,7 +437,7 @@ app.get(
   passport.authenticate('google', { failureRedirect: '/auth/google/failure' }),
   (req, res) => {
     // Redirect to the frontend success route along with user details
-    res.redirect(`http://localhost:3000/auth/success`);
+    res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
   }
 );
 
