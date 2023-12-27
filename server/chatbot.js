@@ -454,7 +454,7 @@ app.get('/auth/google/success', (req, res) => {
 
 // Route for handling failed Google authentication
 app.get('/auth/google/failure', (req, res) => {
-  res.send('Failed to authenticate with Google');
+  res.redirect(`https://aptous-nmce.vercel.app/auth/fail`);
 });
 
 // Protected route that requires authentication
