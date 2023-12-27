@@ -1,4 +1,3 @@
-
 import './App.css';
 import './components/css/chatbot.css';
 import Body from './components/body';
@@ -9,7 +8,7 @@ import Authcheck from './checkuth';
 function App() {
   const [validation,setValidation] = useState(false);
   // console.log(validation);
-  const [authStatus,setAuth] = useState(true);
+  const [authStatus,setAuth] = useState(false);
   const [user,setUser] = useState([]);
   const [greet,setGreetings] = useState('');
   const [boss,getBoss] = useState(true);
