@@ -82,7 +82,7 @@ const Bottom = (props) => {
           name="usermsg"
           autoFocus
           autoComplete="off"
-          placeholder="Ask Me Anything About Admission"
+          placeholder="Ask About Admission"
           value={userMsg}
           onChange={(event) => setUserMsg(event.target.value)}
           disabled={loading}
