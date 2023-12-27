@@ -8,21 +8,29 @@ export default function AuthMain(props) {
     const [autStatus,setAuthStatus] = useState(true);
     const [logSign,setLogSign] = useState(true);
     
-    useEffect(() => {
-      let text = "Welcome to Aptous4";
-      let count = 0;
-  
-      function animateText() {
-        setCollegeName((prevText) => prevText + text[count]);
-        count += 1;
-        if (count === text.length-1) {
-          clearInterval(intervalId);
-          setSublines(true);
+    useEffect(()=>{
+        textTyper();
+     },[]);
+     let typingTimeOut;
+     let text = "Welcome To Aptous4";
+     let countAlpha = 0; 
+     function textTyper() {
+        const textNode = document.querySelector(".textauto");
+        if (textNode) {
+          textNode.textContent = text.slice(0, countAlpha);
+          countAlpha++;
+          if(countAlpha === text.length) {
+            setSublines(true);
+          }
+          if (countAlpha <= text.length) {
+            typingTimeOut = setTimeout(textTyper, 300);
+          }
         }
       }
-      const intervalId = setInterval(animateText, 200);
-      return () => clearInterval(intervalId);
-    }, []);
+    //  if(countAlpha > text.length){
+    //     setSublines(true);
+    //      clearTimeout(typingTimeOut);
+    //  }
 
 
     const logIn =()=>{
@@ -37,7 +45,7 @@ export default function AuthMain(props) {
                         autStatus ?
                         (
                         <div className='animate' >
-                                <h1><span>{botName}</span></h1>
+                                <div className="textauto"></div>
                                 <div className='main-subpoints' style={{display: sublines ? 'block' : 'none'}}>
                                     <p>Ease through admissions with <span style={{backgroundColor:'transparent',fontWeight:'bold'}}>NMCOE</span>'s Chatbot, crafted by our students for personalized guidance and innovative support.</p>
                                     <p>Our academic excellence speaks volumes, defining our <br/>commitment to outstanding education and continuous innovation.</p>
