@@ -104,7 +104,7 @@ app.use(
 
 // cors policy
 app.use(cors({
-  origin: 'https://aptous-nmce.vercel.app',
+  origin: ['https://aptous-nmce.vercel.app','http://localhost:3000'],
   credentials: true,
 }));
 
