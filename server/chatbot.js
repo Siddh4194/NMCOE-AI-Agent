@@ -451,7 +451,7 @@ app.get(
 	if (existingUser) {
 	// User with the given email already exists
 	// Redirect to the frontend failure route or handle accordingly
-	return res.redirect(`http://localhost:3000/auth/success`);
+	return res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
 	}
 	
 	// Create a new user and save it to the database
