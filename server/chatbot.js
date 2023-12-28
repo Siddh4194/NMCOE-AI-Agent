@@ -14,6 +14,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const mailSender = require("./sendMail");
+const GoogleUser = require("./googleSchema");
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
@@ -441,7 +442,26 @@ app.get(
 app.get(
   '/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/auth/google/failure' }),
-  (req, res) => {
+  async (req, res) => {
+	const email = req.user.email;
+	
+	// Check if a user with the given email already exists
+	const existingUser = await GoogleUser.findOne({ email });
+	
+	if (existingUser) {
+	// User with the given email already exists
+	// Redirect to the frontend failure route or handle accordingly
+	return res.redirect(`http://localhost:3000/auth/success`);
+	}
+	
+	// Create a new user and save it to the database
+	const newUser = new GoogleUser({
+	email: req.user.email,
+	name: req.user.displayName,
+	});
+	
+	await newUser.save();
+
     // Redirect to the frontend success route along with user details
     res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
   }
