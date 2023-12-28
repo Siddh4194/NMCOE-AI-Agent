@@ -45,7 +45,7 @@ export default function LogIn(props) {
     <div className='animate'>
       <h3><span>LogIn To Aptous4</span></h3>
       <div className='login_Input'>
-        <input
+{/*         <input
           type="text"
           placeholder='email'
           value={username}
@@ -59,7 +59,7 @@ export default function LogIn(props) {
           onChange={(e) => setPassword(e.target.value)}
           style={{ border: loginError ? '1px solid red' : '1px solid #678983' }}
         />
-        <button onClick={handleLogin}>LogIn</button>
+        <button onClick={handleLogin}>LogIn</button> */}
         <button className='googleButton' onClick={()=> window.location.href = 'https://chatbot-nmce.vercel.app/auth/google'}><i class="fa-brands fa-google"></i>Log In With Google</button>
       </div>
       {loginError && <p style={{ color: 'red' }}>Invalid username or password</p>}
