@@ -14,7 +14,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const mailSender = require("./sendMail");
-const GoogleUser = require("./googleSchema");
+// const GoogleUser = require("./googleSchema");
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
