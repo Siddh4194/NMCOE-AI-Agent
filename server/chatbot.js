@@ -432,7 +432,12 @@ app.post('/checkOtp', (req, res) =>{
   }
 })
 
+const googleUserSchema = new mongoose.Schema({
+  email:String,
+  name:String,
+});
 
+const GoogleUser = mongoose.model('GoogleUser', googleUserSchema);
 
 app.get(
   '/auth/google',
