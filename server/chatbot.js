@@ -442,25 +442,25 @@ app.get(
 app.get(
   '/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/auth/google/failure' }),
-  async (req, res) => {
-	const email = req.user.email;
+   (req, res) => {
+	// const email = req.user.email;
 	
-	// Check if a user with the given email already exists
-	const existingUser = await GoogleUser.findOne({ email });
+	// // Check if a user with the given email already exists
+	// const existingUser = await GoogleUser.findOne({ email });
 	
-	if (existingUser) {
-	// User with the given email already exists
-	// Redirect to the frontend failure route or handle accordingly
-	return res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
-	}
+	// if (existingUser) {
+	// // User with the given email already exists
+	// // Redirect to the frontend failure route or handle accordingly
+	// return res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
+	// }
 	
-	// Create a new user and save it to the database
-	const newUser = new GoogleUser({
-	email: req.user.email,
-	name: req.user.displayName,
-	});
+	// // Create a new user and save it to the database
+	// const newUser = new GoogleUser({
+	// email: req.user.email,
+	// name: req.user.displayName,
+	// });
 	
-	await newUser.save();
+	// await newUser.save();
 
     // Redirect to the frontend success route along with user details
     res.redirect(`https://aptous-nmce.vercel.app/auth/success`);
