@@ -22,6 +22,8 @@ require('./auth');
 
 
 
+
+
 var pass = process.env.DB_PASSWORD;
 
 mongoose.connect(pass, {
@@ -102,11 +104,7 @@ app.use(
   express.urlencoded({ extended: true })
 );
 
-// cors policy
-app.use(cors({
-  origin: ['https://aptous-nmce.vercel.app','http://localhost:3000'],
-  credentials: true,
-}));
+
 
 
 // 	{
@@ -116,8 +114,11 @@ app.use(cors({
   
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // This line is sufficient for parsing URL-encoded data
-app.use(express.static("public"));
-
+// cors policy
+app.use(cors({
+  origin: ['https://aptous-nmce.vercel.app','http://localhost:3000'],
+  credentials: true,
+}));
 
 // Making Creadentials
 app.use(session({
@@ -132,13 +133,13 @@ app.use(passport.session());
 
 
 
-// Initialize the view engine
-app.set("view engine", "ejs");
-app.set('view options', {
-  strict: true,
-  destructuredLocals: ["user", "timestamp"],
-});
-// app.set('views', './views')
+// // Initialize the view engine
+// app.set("view engine", "ejs");
+// app.set('view options', {
+//   strict: true,
+//   destructuredLocals: ["user", "timestamp"],
+// });
+// // app.set('views', './views')
 
 
 
