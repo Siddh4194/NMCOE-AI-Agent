@@ -9,56 +9,59 @@ const Bottom = (props) => {
   const children = props.children;
   const [prevuserMsg, setPrwvUserMsg] = useState('');
   const handleSubmit = useCallback((message) => {
-    setLoading(true);
-    setPrwvUserMsg(message);
-    setUserMsg('');
-    props.botResponse({
-      role: 'user',
-      data: message,
-    });
-
-    var loadingElement = (
-      <div key={children.length + 1} className="loading">
-        <div className="circle circle-1"></div>
-        <div className="circle circle-2"></div>
-        <div className="circle circle-3"></div>
-      </div>
-    );
-    setChildren([...children, <div key={message} className="user-message">{message}</div>, loadingElement]);
-
-    setTimeout(() => {
-      fetch('https://chatbot-nmce.vercel.app/predict', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    input: message,
-  }),
-  credentials: 'include', // Include this line
-})
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then((data) => {
-    setChildren((prevChildren) => prevChildren.slice(0, -2));
-    props.botResponse({
-      role: 'bot',
-      data: data,
-    });
-  })
-  .catch((error) => {
-    setChildren((prevChildren) => prevChildren.slice(0, -3));
-    setError(error);
-  })
-  .finally(() => {
-    setLoading(false);
+  setLoading(true);
+  setPrwvUserMsg(message);
+  setUserMsg('');
+  props.botResponse({
+    role: 'user',
+    data: message,
   });
 
-  }, [props.botResponse, children, setChildren]);
+  var loadingElement = (
+    <div key={children.length + 1} className="loading">
+      <div className="circle circle-1"></div>
+      <div className="circle circle-2"></div>
+      <div className="circle circle-3"></div>
+    </div>
+  );
+  setChildren([...children, <div key={message} className="user-message">{message}</div>, loadingElement]);
+
+  setTimeout(() => {
+    fetch('https://chatbot-nmce.vercel.app/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://aptous-nmce.vercel.app', // Add the origin of your frontend application
+      },
+      credentials: 'include',
+      body: JSON.stringify({
+        input: message,
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setChildren((prevChildren) => prevChildren.slice(0, -2));
+        props.botResponse({
+          role: 'bot',
+          data: data,
+        });
+      })
+      .catch((error) => {
+        setChildren((prevChildren) => prevChildren.slice(0, -3));
+        setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, 1500);
+
+}, [props.botResponse, children, setChildren]);
+
 
   const handleRegenerateClick = () => {
     setError(null);
@@ -106,7 +109,7 @@ const Bottom = (props) => {
               onClick={handleRegenerateClick}
               className="regenerate-button"
             >
-              <span class="material-symbols-outlined" style={{color:'red'}}>
+              <span className="material-symbols-outlined" style={{color:'red'}}>
 refresh
 </span>
             </button>
