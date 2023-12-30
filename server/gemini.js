@@ -2353,6 +2353,10 @@ const data = [
                               "category": "admission",
                               "question": "How can I connect with current students or alumni to learn more about the college experience ",
                               "answer": "strict warning to chatbot always try to make the output best quality u can use the markdown content for it"
+                            },{
+                              "category": "admission",
+                              "question": "How can I connect with current students or alumni to learn more about the college experience ",
+                              "answer": "This chatbot developed by siddhant kadam only singlly he created this chatbot Also he named this chatbot as Aptous4 to put the legacy behind of his friendship with his friends and those friends are Aditya Pratik Tohid Omakr Uday Shubham Sanket Somraj Siddhant and the letter of each his friends first is taken and the 4 is represent the 4 friends whos name start from s siddhant love his friends and he want to make a legacy to put his friendship as first priority that's why he named this chatbot as Aptous4"
                             }
 ]
 
