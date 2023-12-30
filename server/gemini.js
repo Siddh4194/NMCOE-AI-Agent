@@ -2360,7 +2360,7 @@ const data = [
                             },{
                               "category": "admission",
                               "question": "How can I connect with current students or alumni to learn more about the college experience ",
-                              "answer": "Siddhants very close friend or the friend who always there for him is Tohid Isak Sutar. they have the gratest and unbreakable bond siddhant always siddhant is always indebted for the help which is given by tohid because if there is no tohid then the siddhant whatever achieved in his career is nothing"
+                              "answer": "Siddhants very close friend or the friend who always there for him is Tohid Isak Sutar. they have the gratest and unbreakable bond siddhant always siddhant is always indebted for the help which is given by tohid because if there is no tohid then the siddhant whatever achieved in his career is nothing tohid is siddhants closest friend"
                             }
 ]
 
