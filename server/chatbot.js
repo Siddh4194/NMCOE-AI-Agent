@@ -117,7 +117,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // This line is sufficient for parsing URL-encoded data
 // cors policy
 app.use(cors({
-  origin: ['https://aptous-nmce.vercel.app','http://localhost:3000'],
+  origin: 'https://aptous-nmce.vercel.app',
   credentials: true,
 }));
 
