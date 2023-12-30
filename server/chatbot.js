@@ -234,6 +234,8 @@ async function renderModelReply(string){
 }
 
 app.post("/predict",async (req,res) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://aptous-nmce.vercel.app');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
   console.log(req.body.input);
   let pred = await run(req.body.input);
   res.send({responce:pred});
