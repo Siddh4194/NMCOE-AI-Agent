@@ -274,7 +274,7 @@ try {
 ////////// server  -----------------------------------------------
 // main page render
 app.get('/',(req,res)=>{
-    res.send(chatData_All);
+    res.send("Aptous4");
 // res.sendFile("public/chatbot.html");
 	// res.render("chatbot");
 	  // res.render("chatbot");
