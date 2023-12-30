@@ -22,7 +22,7 @@ export default function Chatbody(props) {
         }
       };
     useEffect(()=>{
-        console.log(props.botResponse);
+        // console.log(props.botResponse);
         const tohtml =(
             props.botResponse.data.responce && 
             <div key={children.length + 1}  className="bot-message">
