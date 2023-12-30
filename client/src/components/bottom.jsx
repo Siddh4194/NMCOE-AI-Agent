@@ -45,7 +45,7 @@ const Bottom = (props) => {
           });
         })
         .catch((error) => {
-          console.error('Error submitting form:', error);
+          // console.error('Error submitting form:', error);
           setChildren((prevChildren) => prevChildren.slice(0, -3));
           setError(error);
         })
