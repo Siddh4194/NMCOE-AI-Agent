@@ -37,16 +37,16 @@ export default function Body(props) {
       })
       .then((data) => {
         if (data.status === true) {
-          console.log('Logged out');
+          // console.log('Logged out');
         } else {
-          console.log('Error during logout');
+          // console.log('Error during logout');
           // Show error alert
           setSnackbarMessage('Log Out');
           setSnackbarOpen(true);
         }
       })
       .catch((err) => {
-        console.error('Error during logout:', err);
+        // console.error('Error during logout:', err);
         // Show error alert
         setSnackbarMessage('Error during logout');
         setSnackbarOpen(true);
