@@ -62,10 +62,10 @@ export default function LogIn(props) {
         <button onClick={handleLogin}>LogIn</button> */}
         <button className='googleButton' onClick={()=> window.location.href = 'https://chatbot-nmce.vercel.app/auth/google'}><i class="fa-brands fa-google"></i>Log In With Google</button>
     </div> 
-      {loginError && <p style={{ color: 'red' }}>Invalid username or password</p>}
+{/*       {loginError && <p style={{ color: 'red' }}>Invalid username or password</p>}
       <p style={{ color: '#678983' }}>register</p>
-      <h5 onClick={() => { props.setLogSign(!props.logSign) }} style={{ color: '#678983', cursor: 'pointer' }}>SignUp</h5> */}
-      <h1 className='CollgeBackgroundName'>NMCOE</h1>
+      <h5 onClick={() => { props.setLogSign(!props.logSign) }} style={{ color: '#678983', cursor: 'pointer' }}>SignUp</h5>
+      <h1 className='CollgeBackgroundName'>NMCOE</h1> */}
     </div>
   );
 }
