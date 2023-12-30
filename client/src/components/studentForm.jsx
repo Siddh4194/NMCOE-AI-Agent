@@ -36,7 +36,7 @@ export default function StudentForm(props) {
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Form submitted successfully:', data);
+                // console.log('Form submitted successfully:', data);
                 // Optionally, you can perform additional actions after a successful request
                 setStudentInfo({
                     name: '',
@@ -45,7 +45,7 @@ export default function StudentForm(props) {
                 });
             })
             .catch(error => {
-                console.error('Error submitting form:', error);
+                // console.error('Error submitting form:', error);
                 // Handle errors or provide feedback to the user
             });
         } else if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(studentInfo.email))){
