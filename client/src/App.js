@@ -23,7 +23,7 @@ function App() {
 
     // Check if the current URL is the desired route
     if (currentUrl.endsWith('/auth/success')) {
-      console.log('Accessing /auth/success route');
+      // console.log('Accessing /auth/success route');
       setAuth(true);
       // Do something here if needed
     }
