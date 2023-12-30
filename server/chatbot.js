@@ -143,7 +143,10 @@ app.use(passport.session());
 // // app.set('views', './views')
 
 
-
+app.use('/predict', cors({
+  origin: 'https://aptous-nmce.vercel.app',
+  credentials: true,
+}));
 
 
 // student data is posted
