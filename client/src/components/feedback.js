@@ -20,13 +20,13 @@ export default function FeedBack(props) {
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Form submitted successfully:', data);
+                // console.log('Form submitted successfully:', data);
                 setSubmit(true);
                 props.feedState(!props.state);
                 // Optionally, you can perform additional actions after a successful request
             })
             .catch(error => {
-                console.error('Error submitting form:', error);
+                // console.error('Error submitting form:', error);
                 // Handle errors or provide feedback to the user
                 setSubmit(false);
             });
