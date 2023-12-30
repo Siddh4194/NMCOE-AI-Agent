@@ -28,31 +28,36 @@ const Bottom = (props) => {
 
     setTimeout(() => {
       fetch('https://chatbot-nmce.vercel.app/predict', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          input: message,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          setChildren((prevChildren) => prevChildren.slice(0, -2));
-          props.botResponse({
-            role: 'bot',
-            data: data,
-          });
-        })
-        .catch((error) => {
-          // console.error('Error submitting form:', error);
-          setChildren((prevChildren) => prevChildren.slice(0, -3));
-          setError(error);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, 1500);
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    input: message,
+  }),
+  credentials: 'include', // Include this line
+})
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then((data) => {
+    setChildren((prevChildren) => prevChildren.slice(0, -2));
+    props.botResponse({
+      role: 'bot',
+      data: data,
+    });
+  })
+  .catch((error) => {
+    setChildren((prevChildren) => prevChildren.slice(0, -3));
+    setError(error);
+  })
+  .finally(() => {
+    setLoading(false);
+  });
+
   }, [props.botResponse, children, setChildren]);
 
   const handleRegenerateClick = () => {
