@@ -62,17 +62,17 @@ export default function SignUp(props) {
       })
       .then((data) => {
         if (data.status === true) {
-          console.log('Registered');
+          // console.log('Registered');
           props.setAuth(true);
         } else {
-          console.log('Registration failed:', data.message);
+          // console.log('Registration failed:', data.message);
           setSnackbarMessage(data.message);
           setSnackbarOpen(true);
           props.setAuth(false);
         }
       })
       .catch((err) => {
-        console.error('Error during registration:', err);
+        // console.error('Error during registration:', err);
         setSnackbarMessage('Error during registration. Please try again.');
         setSnackbarOpen(true);
       });
@@ -112,7 +112,7 @@ export default function SignUp(props) {
         }
       })
       .catch((err) => {
-        console.error('Error during verification:', err);
+        // console.error('Error during verification:', err);
         setOtpStatus('Check Internet 🛜');
         setSnackbarMessage('Error during OTP verification. Please try again.');
         setSnackbarOpen(true);
