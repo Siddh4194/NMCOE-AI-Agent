@@ -17,7 +17,7 @@ export default function Chatbody(props) {
         try {
           await navigator.clipboard.writeText(textToCopy);
         } catch (error) {
-          console.error('Failed to copy text:', error);
+          // console.error('Failed to copy text:', error);
           alert('Copying to clipboard not supported.');
         }
       };
