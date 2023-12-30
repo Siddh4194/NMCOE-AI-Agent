@@ -24,17 +24,17 @@ export default function LogIn(props) {
         const data = await response.json();
   
         if (data.status === true) {
-          console.log('Logged In');
+          // console.log('Logged In');
           props.setAuth(true);
         } else {
-          console.log('Login failed:', data.message);
+          // console.log('Login failed:', data.message);
           props.setAuth(false);
         }
       } else {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
     } catch (err) {
-      console.error('Error during login:', err);
+      // console.error('Error during login:', err);
     }
   };
   
