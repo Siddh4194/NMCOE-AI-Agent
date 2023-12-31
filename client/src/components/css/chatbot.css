@@ -840,11 +840,7 @@ text-align: center;
 }    
 }
 
-@media (min-width: 768px) {
-  
-}
-
-@media (max-width:600px) {
+@media (max-width:768px) {
   .welcome{
     width: 100%;
     display: flex;
@@ -897,40 +893,31 @@ text-align: center;
   .bot-message:hover .botToggle{
     opacity: 1;
   }
-  
-  .ask-body input{
-    width: 80%;
-    border: none;
-    margin: auto;
-    margin-left: 1em;
-    color: var(--botton-text);
-    height: 50%;
-    background-color: var(--bot-color);
-    font-size: 2vh;
+ 
+  .smilies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: clamp(1.2em,1vw,2.1em);
+    /* transition: .9s; */
+    /* height: 90%; */
+    /* width: fit-content; */
   }
-  .in1,.in2,.in3{
-  border: none;
-  display: block;
-  width:70vw;
-  padding: 1vh;
-  color: #fff;
-  margin: .5rem;
-  background-color:var(--input-background);
-  border-bottom: 1px solid rgb(101, 101, 101);
-  border-radius: .25rem;
-  transition: 1s;
-}
-  .buttons  button{
-  padding: .5rem;
-  border-radius: 10px;
-  border: none;
-  margin: .5rem;
-  background-color: var(--input-background);
-  height: 6vh;
-  font-size: clamp(.5em,2vw,3em);
-  color: var(--botton-text);
-  height: max-content;
-  width: max-content;
-}
-
+  .smilies button{
+    height: 3em;
+    /* font-size: clamp(1.72em,2vw,2.1em); */
+    width: 2em;
+    transition: .7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .smile {
+    background: none;
+    border: none;
+    height: 5%;
+    width: 5%;
+    /* margin: 0.3em; */
+    transition: font-size 0.2s ease;
+  }
 }
