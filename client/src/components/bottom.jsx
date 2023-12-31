@@ -140,7 +140,11 @@ const [isVoiceButtonDown, setIsVoiceButtonDown] = useState(false);
             onChange={(event) => setUserMsg(event.target.value)}
             disabled={true}
           />
-
+          <button onClick={()=> setError(false)} className="regenerate-button">
+            <span className="material-symbols-outlined" style={{ color: '#678983' }}>
+              add
+            </span>
+          </button>
           <button onClick={handleRegenerateClick} className="regenerate-button">
             <span className="material-symbols-outlined" style={{ color: 'red' }}>
               refresh
