@@ -31,7 +31,7 @@ const [isVoiceButtonDown, setIsVoiceButtonDown] = useState(false);
     setChildren([...children, <div key={message} className="user-message">{message}</div>, loadingElement]);
 
     setTimeout(() => {
-      fetch('http://localhost:3001/predict', {
+      fetch('https://chatbot-nmce.vercel.app/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
