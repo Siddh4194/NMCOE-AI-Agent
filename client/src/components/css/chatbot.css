@@ -194,7 +194,7 @@ body{
     width: 80%;
     border: none;
     margin: auto;
-    margin-left: 3em;
+/*     margin-left: 3em; */
     color: var(--botton-text);
     height: 50%;
     background-color: var(--bot-color);
@@ -920,4 +920,10 @@ text-align: center;
     /* margin: 0.3em; */
     transition: font-size 0.2s ease;
   }
+}
+
+
+.regenerate-button.held-down {
+  transform: scale(0.9); /* Adjust the scale factor as needed */
+  transition: transform 0.2s ease; /* Adjust the transition duration as needed */
 }
