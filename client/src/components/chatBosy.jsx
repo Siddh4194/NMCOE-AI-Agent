@@ -58,13 +58,13 @@ export default function Chatbody(props) {
     const pass = (n) => {
         const passArray = [
             (
-                <div key={children.length + 1} className="bot-message"><div className='bot'><h3>Documents For OBC</h3><ul><li>12<sup>th</sup> Certificate</li><li>10<sup>th</sup> Certificate</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>EWS Certificate if Applicable</li><li>CET/JEE MarkList</li><li>CAST Certificate</li><li>CAST Validity</li><li>NON Cremeliar</li></ul></div></div>
+                <div key={children.length + 1} className="bot-message"><div className='bot'><h3>Documents For OBC</h3><ul><li>SSC Marksheet</li><li>HSC Marksheet</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>MHT-CET / JEE Scorecard</li><li>Income Certificate</li><li>Caste Certificate</li><li>Caste Validity</li><li>Non Cremy Layer Certificate</li></ul></div></div>
             ),
             (
-                <div key={children.length + 1} className="bot-message"><div className='bot'><h3>Documents For OPEN</h3><ul><li>12<sup>th</sup> Certificate</li><li>10<sup>th</sup> Certificate</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>EWS Certificate if Applicable</li></ul></div></div>
+                <div key={children.length + 1} className="bot-message"><div className='bot'><h3>Documents For OPEN</h3><ul><li>SSC Marksheet</li><li>HSC Marksheet</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>MHT-CET / JEE Scorecard</li><li>Income Certificate</li><li>EWS certificate (if applied)</li></ul></div></div>
             ),
             (
-                <div key={children.length + 1} className="bot-message"><div className='bot'><ul><li>12<sup>th</sup> Certificate</li><li>10<sup>th</sup> Certificate</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>EWS Certificate if Applicable</li><li>CET/JEE MarkList</li><li>CAST Certificate</li><li>CAST Validity</li><li>NON Cremeliar</li></ul></div></div>
+                <div key={children.length + 1} className="bot-message"><div className='bot'><ul><li>SSC Marksheet</li><li>HSC Marksheet</li><li>Leaving Certificate</li><li>Domacile Certificate</li><li>Income Certificate</li><li>MHT-CET / JEE Scorecard</li><li>Income Certificate</li><li>Caste Certificate</li><li>Caste Validity</li></ul></div></div>
             ),
             (
                 <div key={children.length + 1} className="bot-message"><div className='bot'> <h1 className='bot-h3'>facilities offered</h1> <p>The Central Library is our centre of Information hub with par excellence and has excellent facility with multiple copies of Latest Textbooks, Reference Books and Periodicals. For Needy students Book-Bank facility for Reserved Category Students is also available. Reference section, study rooms and Photocopying Facilities directs students easy and proper path of knowledge in pleasant atmosphere. A Computer Quick Reference is installed in the library. Internet connection is ready for accessing the information 24x7 to all branch students. The following is college asset.</p> <a className='bot-link' href='https://nmcoe.org.in/library.php'>Go to web site</a> </div></div>
@@ -82,7 +82,7 @@ export default function Chatbody(props) {
                 <div className='bot-message'><div key={children.length + 1} className='bot'><ul><li>12<sup>th</sup> Pass</li><li>Min 45% aggregate marks for Open<br />Min 40% aggregate marks for Category</li><li>At least One Entrance test appearance CET/JEE</li></ul></div></div>
             ),
             (
-                <div className='bot-message'><div key={children.length + 1} className='buttons'><h3 className='bot-h3'>Choose You Caste.</h3><button onClick={() => pass(2)}>OPEN</button><button onClick={() => pass(1)}>OBC</button><button onClick={() => pass(3)}>SC</button><button onClick={() => pass(3)}>ST</button><button onClick={() => pass(3)}>NT</button></div></div>
+                <div className='bot-message'><div key={children.length + 1} className='buttons'><h3 className='bot-h3'>Choose You Caste.</h3><button onClick={() => pass(2)}>OPEN</button><button onClick={() => pass(1)}>OBC/SBC</button><button onClick={() => pass(3)}>SC</button><button onClick={() => pass(3)}>ST</button><button onClick={() => pass(3)}>NT/VJDT</button></div></div>
             ),
             (
                 <div className='bot-message'><div key={children.length + 1} className='bot'><h3>Courses offered.</h3><br /><p>From traditional undergraduate degrees to specialized graduate programs, there is a course for everyone.Colleges also offer a variety of extracurricular activities and opportunities for students to get involved and grow.<br />Go to Web Site </p><a className='institute' href='https://nmcoe.org.in/courses.php#'>Courses and TFWS Codes</a></div></div>
