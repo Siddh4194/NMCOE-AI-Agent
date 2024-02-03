@@ -82,7 +82,7 @@ export default function Chatbody(props) {
                 <div className='bot-message'><div key={children.length + 1} className='bot'><ul><li>12<sup>th</sup> Pass</li><li>Min 45% aggregate marks for Open<br />Min 40% aggregate marks for Category</li><li>At least One Entrance test appearance CET/JEE</li></ul></div></div>
             ),
             (
-                <div className='bot-message'><div key={children.length + 1} className='buttons'><h3 className='bot-h3'>Choose You Caste.</h3><button onClick={() => pass(1)}>OPEN</button><button onClick={() => pass(1)}>OBC</button><button onClick={() => pass(3)}>SC</button><button onClick={() => pass(3)}>ST</button><button onClick={() => pass(3)}>NT</button></div></div>
+                <div className='bot-message'><div key={children.length + 1} className='buttons'><h3 className='bot-h3'>Choose You Caste.</h3><button onClick={() => pass(2)}>OPEN</button><button onClick={() => pass(1)}>OBC</button><button onClick={() => pass(3)}>SC</button><button onClick={() => pass(3)}>ST</button><button onClick={() => pass(3)}>NT</button></div></div>
             ),
             (
                 <div className='bot-message'><div key={children.length + 1} className='bot'><h3>Courses offered.</h3><br /><p>From traditional undergraduate degrees to specialized graduate programs, there is a course for everyone.Colleges also offer a variety of extracurricular activities and opportunities for students to get involved and grow.<br />Go to Web Site </p><a className='institute' href='https://nmcoe.org.in/courses.php#'>Courses and TFWS Codes</a></div></div>
@@ -116,15 +116,3 @@ export default function Chatbody(props) {
         </div>
     );
 }
-
-
-
-
-
-
-
-    // // make the unclickable linkes to be clickable
-    // const makeLinksClickable = (htmlString) => {
-    //     const linkRegex = /(?:https?|ftp):\/\/[\n\S]+/g;
-    //     return htmlString.replace(linkRegex, (url) => `<a href="${url}" target="_blank">${url}</a>`);
-    //   };
